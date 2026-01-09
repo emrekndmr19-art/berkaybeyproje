@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Novera Sigorta | Ana Taslak</title>
+    <title>Novera Sigorta | Hizmetler</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -129,20 +129,20 @@
       }
 
       .hero-content {
-        margin-top: 48px;
+        margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 40px;
+        gap: 32px;
         align-items: center;
       }
 
       .hero-text h1 {
-        font-size: clamp(2.4rem, 3.5vw, 3.6rem);
+        font-size: clamp(2.2rem, 3.2vw, 3.2rem);
         margin: 12px 0 16px;
       }
 
       .lead {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         line-height: 1.7;
         color: var(--ink-soft);
         max-width: 540px;
@@ -156,7 +156,7 @@
       }
 
       .hero-actions {
-        margin-top: 32px;
+        margin-top: 28px;
         display: flex;
         gap: 16px;
         flex-wrap: wrap;
@@ -193,67 +193,6 @@
         justify-content: center;
       }
 
-      .hero-card {
-        background: var(--primary);
-        border: 1px solid rgba(31, 31, 31, 0.7);
-        padding: 32px;
-        border-radius: 24px;
-        box-shadow: 18px 18px 30px rgba(20, 20, 20, 0.18);
-      }
-
-      .card-top {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 16px;
-      }
-
-      .hero-card h2 {
-        font-size: 2rem;
-        letter-spacing: 2px;
-        margin: 0;
-      }
-
-      .hero-card p {
-        margin: 4px 0 0;
-        font-weight: 600;
-        letter-spacing: 2px;
-      }
-
-      .qr-placeholder {
-        width: 86px;
-        height: 86px;
-        border: 2px solid var(--ink);
-        display: grid;
-        place-items: center;
-        font-weight: 700;
-      }
-
-      .card-bottom {
-        margin-top: 28px;
-      }
-
-      .card-name {
-        font-weight: 700;
-        margin: 0 0 12px;
-      }
-
-      .card-line {
-        width: 64px;
-        height: 3px;
-        background: var(--ink);
-        margin-bottom: 16px;
-      }
-
-      .card-bottom ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        gap: 8px;
-        font-weight: 600;
-      }
-
       main {
         padding: 0 6vw 80px;
         position: relative;
@@ -268,8 +207,8 @@
       }
 
       .section-title h2 {
-        margin: 12px 0 32px;
-        font-size: clamp(2rem, 3vw, 2.8rem);
+        margin: 12px 0 24px;
+        font-size: clamp(2rem, 3vw, 2.6rem);
       }
 
       .section-lead {
@@ -280,9 +219,10 @@
       }
 
       .service-grid {
+        margin-top: 24px;
         display: grid;
-        gap: 24px;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       }
 
       .service-grid article {
@@ -290,24 +230,23 @@
         border-radius: 18px;
         padding: 24px;
         border: 1px solid rgba(0, 0, 0, 0.1);
-        min-height: 150px;
       }
 
       .cta {
-        margin-top: 48px;
-        padding: 36px 42px;
+        margin-top: 40px;
+        padding: 32px 36px;
         background: var(--ink);
         color: var(--primary);
         border-radius: 24px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 24px;
+        gap: 20px;
         flex-wrap: wrap;
       }
 
       .cta h2 {
-        margin: 0 0 12px;
+        margin: 0 0 8px;
       }
 
       .footer {
@@ -356,44 +295,12 @@
         .nav-actions {
           flex-wrap: wrap;
         }
-
-        .hero {
-          padding: 40px 6vw 64px;
-        }
-
-        .hero-content {
-          margin-top: 40px;
-          gap: 32px;
-        }
-
-        .services {
-          padding: 40px;
-        }
-
-        .cta {
-          padding: 32px;
-        }
       }
 
       @media (max-width: 720px) {
         .nav {
           flex-direction: column;
           align-items: flex-start;
-        }
-
-        .services {
-          padding: 32px;
-        }
-      }
-
-      @media (max-width: 560px) {
-        .hero-card {
-          box-shadow: 12px 12px 22px rgba(20, 20, 20, 0.2);
-          padding: 24px;
-        }
-
-        .cta {
-          padding: 28px;
         }
       }
     </style>
@@ -419,36 +326,15 @@
 
       <section class="hero-content">
         <div class="hero-text">
-          <p class="eyebrow">Güvenin Yeni Adı</p>
-          <h1>Novera Sigorta ile hayatınızı güvenle yaşayın.</h1>
+          <p class="eyebrow">Hizmetler</p>
+          <h1>Her ihtiyaca uygun sigorta çözümleri.</h1>
           <p class="lead">
-            Novera Sigorta, sigortayı daha anlaşılır, daha erişilebilir ve daha güvenli hale
-            getirmek için kuruldu. Dijital altyapımız ve samimi yaklaşımımızla sadece
-            poliçe değil, güven inşa ediyoruz.
+            Novera Sigorta, bireysel ve kurumsal ihtiyaçlara uygun poliçe seçeneklerini
+            uzman danışmanlıkla bir araya getirir.
           </p>
           <div class="hero-actions">
             <a class="primary" href="teklif.html">Teklif Al</a>
-            <a class="ghost" href="iletisim.html">Hemen Ara</a>
-          </div>
-        </div>
-        <div class="hero-card">
-          <div class="card-top">
-            <div>
-              <h2>NOVERA</h2>
-              <p>SİGORTA</p>
-            </div>
-            <div class="qr-placeholder">
-              <span>QR</span>
-            </div>
-          </div>
-          <div class="card-bottom">
-            <p class="card-name">Berkay ÖZKAN</p>
-            <div class="card-line"></div>
-            <ul>
-              <li>+90 532 643 29 00</li>
-              <li>berkayozkan@noverasigorta.com</li>
-              <li>www.noverasigorta.com</li>
-            </ul>
+            <a class="ghost" href="iletisim.html">Danışmana Sor</a>
           </div>
         </div>
       </section>
@@ -457,36 +343,47 @@
     <main>
       <section class="services">
         <div class="section-title">
-          <p class="eyebrow">Ana Sayfa Metni</p>
-          <h2>Novera Sigorta’ya hoş geldiniz.</h2>
+          <p class="eyebrow">Odak Alanları</p>
+          <h2>Güvenceyi sadeleştiren hizmet başlıkları.</h2>
           <p class="section-lead">
-            Modern çağın ihtiyaçlarını yakından takip eden yapımızla bireysel ve kurumsal
-            müşterilerimize yenilikçi çözümler sunuyoruz. Dijitalleşen dünyaya uyum sağlayan
-            hizmet modelimizle yalnızca bugünü değil, geleceğinizi de güvence altına alıyoruz.
+            İşletmelerden bireysel planlara kadar her aşamada hızlı, şeffaf ve anlaşılır
+            bir deneyim sunuyoruz.
           </p>
         </div>
         <div class="service-grid">
           <article>
-            <h3>Kurumsal Güvence</h3>
-            <p>İşletmenizi büyütürken riskleri görünmez kılan güçlü poliçe önerileri.</p>
+            <h3>Kurumsal Sigortalar</h3>
+            <p>İşletmeler için kapsamlı risk analizi ve stratejik poliçe kurgusu.</p>
           </article>
           <article>
-            <h3>Bireysel Planlar</h3>
-            <p>Hayat, sağlık ve yaşam tarzınıza özel esnek teminat kombinasyonları.</p>
+            <h3>Bireysel Paketler</h3>
+            <p>Hayat, sağlık ve konut gibi kişisel ihtiyaçlar için esnek çözümler.</p>
+          </article>
+          <article>
+            <h3>Oto Sigortaları</h3>
+            <p>Araç güvenliğinizi destekleyen hızlı teklif ve hasar yönetimi.</p>
+          </article>
+          <article>
+            <h3>Sağlık &amp; Ferdi Kaza</h3>
+            <p>Sağlık güvencenizi güçlendiren kapsamlı plan alternatifleri.</p>
+          </article>
+          <article>
+            <h3>Gayrimenkul</h3>
+            <p>Konut ve ticari alanlar için güvenli, şeffaf sigorta planları.</p>
           </article>
           <article>
             <h3>Danışmanlık</h3>
-            <p>Her poliçede yanınızda, ihtiyaçlarınıza göre yeniden kurgulanmış destek.</p>
+            <p>Piyasa analizi, poliçe yenileme ve kapsam optimizasyonu desteği.</p>
           </article>
         </div>
       </section>
 
       <section class="cta">
-        <div class="cta-text">
-          <h2>Teklif almak için tek adım yeterli.</h2>
-          <p>İhtiyacınıza uygun poliçeyi birlikte tasarlayalım.</p>
+        <div>
+          <h2>İhtiyacınıza özel teklif için buradayız.</h2>
+          <p>Hızlı teklif almak için birkaç dakikada formu tamamlayın.</p>
         </div>
-        <a class="primary" href="teklif.html">Teklif Oluştur</a>
+        <a class="primary" href="teklif.html">Teklif Al</a>
       </section>
     </main>
 
