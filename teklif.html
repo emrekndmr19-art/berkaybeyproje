@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novera Sigorta | Teklif Al</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: only light;
+        --primary: #f4c300;
+        --primary-deep: #d6a900;
+        --ink: #1f1f1f;
+        --ink-soft: #333;
+        --cream: #fff6d1;
+        --white: #fff;
+        --shadow: rgba(15, 15, 15, 0.25);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Manrope", sans-serif;
+        color: var(--ink);
+        background: linear-gradient(180deg, #f8d94c 0%, #f4c300 60%, #f4c300 100%);
+        min-height: 100vh;
+        position: relative;
+      }
+
+      .grain {
+        position: fixed;
+        inset: 0;
+        background-image: radial-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+        background-size: 4px 4px;
+        mix-blend-mode: multiply;
+        opacity: 0.3;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .hero {
+        padding: 40px 6vw 72px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .brand-mark {
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        border: 2px solid var(--ink);
+        border-radius: 16px;
+        font-weight: 700;
+        font-size: 20px;
+      }
+
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .brand-name {
+        font-weight: 800;
+        letter-spacing: 3px;
+        font-size: 22px;
+      }
+
+      .brand-sub {
+        font-weight: 600;
+        letter-spacing: 4px;
+        font-size: 12px;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: var(--ink);
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        transition: color 0.2s ease;
+      }
+
+      .nav-button {
+        border: 1px solid rgba(31, 31, 31, 0.7);
+        background: var(--white);
+        color: var(--ink);
+        border-radius: 999px;
+        padding: 12px 22px;
+        font-weight: 700;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      main {
+        padding: 0 6vw 80px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .form-card {
+        background: var(--cream);
+        padding: 40px;
+        border-radius: 32px;
+        box-shadow: 14px 14px 30px rgba(20, 20, 20, 0.18);
+        display: grid;
+        gap: 24px;
+      }
+
+      .form-grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .form-field {
+        display: grid;
+        gap: 8px;
+      }
+
+      label {
+        font-weight: 600;
+      }
+
+      input,
+      textarea,
+      select {
+        border-radius: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        padding: 12px 14px;
+        font-family: inherit;
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      button.primary,
+      a.primary {
+        border: none;
+        background: var(--ink);
+        color: var(--primary);
+        padding: 14px 28px;
+        font-weight: 700;
+        border-radius: 999px;
+        cursor: pointer;
+        box-shadow: 0 12px 24px rgba(20, 20, 20, 0.2);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      }
+
+      .nav-link:hover {
+        color: #000;
+      }
+
+      .nav-button:hover,
+      .nav-button:focus-visible,
+      a.primary:hover,
+      a.primary:focus-visible,
+      button.primary:hover,
+      button.primary:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 26px rgba(20, 20, 20, 0.22);
+      }
+
+      .footer {
+        background: var(--cream);
+        padding: 48px 6vw 56px;
+        border-top: 1px solid rgba(31, 31, 31, 0.15);
+        position: relative;
+        z-index: 2;
+      }
+
+      .footer-grid {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .footer h3 {
+        margin: 0 0 12px;
+      }
+
+      .footer p {
+        margin: 0;
+        color: var(--ink-soft);
+        line-height: 1.6;
+      }
+
+      .footer-links,
+      .footer-contact {
+        display: grid;
+        gap: 10px;
+        font-weight: 600;
+      }
+
+      .footer-links a {
+        text-decoration: none;
+        color: var(--ink);
+      }
+
+      .footer-meta {
+        margin-top: 28px;
+        font-size: 0.9rem;
+        color: var(--ink-soft);
+      }
+
+      @media (max-width: 900px) {
+        .nav-actions {
+          flex-wrap: wrap;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grain"></div>
+    <header class="hero">
+      <nav class="nav">
+        <div class="brand">
+          <span class="brand-mark">N</span>
+          <div class="brand-text">
+            <span class="brand-name">NOVERA</span>
+            <span class="brand-sub">SİGORTA</span>
+          </div>
+        </div>
+        <div class="nav-actions">
+          <a class="nav-link" href="index.html">Ana Sayfa</a>
+          <a class="nav-link" href="hizmetler.html">Hizmetler</a>
+          <a class="nav-link" href="kurumsal.html">Kurumsal</a>
+          <a class="nav-link" href="iletisim.html">İletişim</a>
+          <a class="nav-button" href="teklif.html">Teklif Al</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="form-card">
+        <div>
+          <p class="eyebrow">Teklif Formu</p>
+          <h2>Size özel teklif için formu doldurun.</h2>
+          <p>Ekibimiz en kısa sürede sizinle iletişime geçecektir.</p>
+        </div>
+        <form class="form-grid">
+          <div class="form-field">
+            <label for="name">Ad Soyad</label>
+            <input id="name" name="name" type="text" placeholder="Adınız Soyadınız" />
+          </div>
+          <div class="form-field">
+            <label for="phone">Telefon</label>
+            <input id="phone" name="phone" type="tel" placeholder="+90 5xx xxx xx xx" />
+          </div>
+          <div class="form-field">
+            <label for="email">E-posta</label>
+            <input id="email" name="email" type="email" placeholder="ornek@mail.com" />
+          </div>
+          <div class="form-field">
+            <label for="type">Sigorta Türü</label>
+            <select id="type" name="type">
+              <option>Bireysel</option>
+              <option>Kurumsal</option>
+              <option>Oto</option>
+              <option>Sağlık</option>
+              <option>Gayrimenkul</option>
+            </select>
+          </div>
+          <div class="form-field" style="grid-column: 1 / -1;">
+            <label for="message">Notunuz</label>
+            <textarea id="message" name="message" placeholder="İhtiyacınızla ilgili kısa bir not paylaşın."></textarea>
+          </div>
+          <div style="grid-column: 1 / -1;">
+            <button class="primary" type="submit">Gönder</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h3>Novera Sigorta</h3>
+          <p>Güvenin yeni adı. Şeffaf, hızlı ve insana yakın sigorta danışmanlığı.</p>
+        </div>
+        <div class="footer-links">
+          <strong>Hızlı Linkler</strong>
+          <a href="hizmetler.html">Hizmetler</a>
+          <a href="kurumsal.html">Kurumsal</a>
+          <a href="iletisim.html">İletişim</a>
+          <a href="teklif.html">Teklif Al</a>
+        </div>
+        <div class="footer-contact">
+          <strong>İletişim</strong>
+          <span>+90 532 643 29 00</span>
+          <span>berkayozkan@noverasigorta.com</span>
+          <span>www.noverasigorta.com</span>
+        </div>
+        <div class="footer-contact">
+          <strong>Adres</strong>
+          <span>Cumhuriyet Mahallesi, Nilüfer Hatun Caddesi No:114</span>
+          <span>I Blok No:11 - Podyumpark, Nilüfer/Bursa 16140</span>
+        </div>
+      </div>
+      <div class="footer-meta">© 2024 Novera Sigorta. Tüm hakları saklıdır.</div>
+    </footer>
+  </body>
+</html>

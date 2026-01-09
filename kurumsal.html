@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novera Sigorta | Kurumsal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: only light;
+        --primary: #f4c300;
+        --primary-deep: #d6a900;
+        --ink: #1f1f1f;
+        --ink-soft: #333;
+        --cream: #fff6d1;
+        --white: #fff;
+        --shadow: rgba(15, 15, 15, 0.25);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Manrope", sans-serif;
+        color: var(--ink);
+        background: linear-gradient(180deg, #f8d94c 0%, #f4c300 60%, #f4c300 100%);
+        min-height: 100vh;
+        position: relative;
+      }
+
+      .grain {
+        position: fixed;
+        inset: 0;
+        background-image: radial-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+        background-size: 4px 4px;
+        mix-blend-mode: multiply;
+        opacity: 0.3;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .hero {
+        padding: 40px 6vw 72px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .brand-mark {
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        border: 2px solid var(--ink);
+        border-radius: 16px;
+        font-weight: 700;
+        font-size: 20px;
+      }
+
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .brand-name {
+        font-weight: 800;
+        letter-spacing: 3px;
+        font-size: 22px;
+      }
+
+      .brand-sub {
+        font-weight: 600;
+        letter-spacing: 4px;
+        font-size: 12px;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: var(--ink);
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        transition: color 0.2s ease;
+      }
+
+      .nav-button {
+        border: 1px solid rgba(31, 31, 31, 0.7);
+        background: var(--white);
+        color: var(--ink);
+        border-radius: 999px;
+        padding: 12px 22px;
+        font-weight: 700;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      .hero-content {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        align-items: center;
+      }
+
+      .hero-text h1 {
+        font-size: clamp(2.2rem, 3.2vw, 3.2rem);
+        margin: 12px 0 16px;
+      }
+
+      .lead {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: var(--ink-soft);
+        max-width: 540px;
+      }
+
+      .eyebrow {
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      button.primary,
+      a.primary {
+        border: none;
+        background: var(--ink);
+        color: var(--primary);
+        padding: 14px 28px;
+        font-weight: 700;
+        border-radius: 999px;
+        cursor: pointer;
+        box-shadow: 0 12px 24px rgba(20, 20, 20, 0.2);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      }
+
+      .nav-link:hover {
+        color: #000;
+      }
+
+      .nav-button:hover,
+      .nav-button:focus-visible,
+      a.primary:hover,
+      a.primary:focus-visible,
+      button.primary:hover,
+      button.primary:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 26px rgba(20, 20, 20, 0.22);
+      }
+
+      main {
+        padding: 0 6vw 80px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .story {
+        background: var(--cream);
+        padding: 40px;
+        border-radius: 32px;
+        box-shadow: 14px 14px 30px rgba(20, 20, 20, 0.18);
+      }
+
+      .story p {
+        line-height: 1.7;
+        color: var(--ink-soft);
+      }
+
+      .pillars {
+        margin-top: 32px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+
+      .pillars article {
+        background: var(--white);
+        border-radius: 22px;
+        padding: 24px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .values {
+        margin-top: 32px;
+        background: var(--white);
+        border-radius: 24px;
+        padding: 32px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .value-grid {
+        margin-top: 20px;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .value-grid article {
+        background: var(--cream);
+        border-radius: 18px;
+        padding: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .cta {
+        margin-top: 32px;
+        padding: 32px 36px;
+        background: var(--ink);
+        color: var(--primary);
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .cta h2 {
+        margin: 0 0 8px;
+      }
+
+      .footer {
+        background: var(--cream);
+        padding: 48px 6vw 56px;
+        border-top: 1px solid rgba(31, 31, 31, 0.15);
+        position: relative;
+        z-index: 2;
+      }
+
+      .footer-grid {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .footer h3 {
+        margin: 0 0 12px;
+      }
+
+      .footer p {
+        margin: 0;
+        color: var(--ink-soft);
+        line-height: 1.6;
+      }
+
+      .footer-links,
+      .footer-contact {
+        display: grid;
+        gap: 10px;
+        font-weight: 600;
+      }
+
+      .footer-links a {
+        text-decoration: none;
+        color: var(--ink);
+      }
+
+      .footer-meta {
+        margin-top: 28px;
+        font-size: 0.9rem;
+        color: var(--ink-soft);
+      }
+
+      @media (max-width: 900px) {
+        .nav-actions {
+          flex-wrap: wrap;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grain"></div>
+    <header class="hero">
+      <nav class="nav">
+        <div class="brand">
+          <span class="brand-mark">N</span>
+          <div class="brand-text">
+            <span class="brand-name">NOVERA</span>
+            <span class="brand-sub">SİGORTA</span>
+          </div>
+        </div>
+        <div class="nav-actions">
+          <a class="nav-link" href="index.html">Ana Sayfa</a>
+          <a class="nav-link" href="hizmetler.html">Hizmetler</a>
+          <a class="nav-link" href="kurumsal.html">Kurumsal</a>
+          <a class="nav-link" href="iletisim.html">İletişim</a>
+          <a class="nav-button" href="teklif.html">Teklif Al</a>
+        </div>
+      </nav>
+
+      <section class="hero-content">
+        <div class="hero-text">
+          <p class="eyebrow">Kurumsal</p>
+          <h1>Güven inşa eden marka hikayesi.</h1>
+          <p class="lead">
+            Novera Sigorta, sigortayı daha anlaşılır, daha erişilebilir ve daha güvenli
+            hale getirme vizyonuyla yol alır.
+          </p>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="story">
+        <p class="eyebrow">Marka Hikayesi</p>
+        <h2>“Biz sadece poliçe düzenlemiyoruz, sizin için güven inşa ediyoruz.”</h2>
+        <p>
+          Novera Sigorta, insanların hayatındaki en değerli şeylerin korunmayı hak ettiği
+          inancıyla yola çıktı. Bursa’nın samimi dokusundan ilham alan yaklaşımımız, her
+          müşteriyi bir işlem olarak değil, bir yol arkadaşı olarak görür.
+        </p>
+      </section>
+
+      <section class="pillars">
+        <article>
+          <p class="eyebrow">Vizyon</p>
+          <h3>Sigortacılıkta güveni ve yeniliği bir araya getiriyoruz.</h3>
+          <p>
+            Dijital çağın referans sigorta markalarından biri olmak için teknolojiyi insan
+            odaklı hizmet anlayışıyla birleştiriyoruz.
+          </p>
+        </article>
+        <article>
+          <p class="eyebrow">Misyon</p>
+          <h3>Teknoloji destekli, şeffaf ve hızlı çözümlerle hayatınıza güven katıyoruz.</h3>
+          <p>
+            Müşterilerimizin ihtiyaçlarını doğru analiz ediyor, yenilikçi ve erişilebilir
+            çözümlerle sigortayı değer katan bir güven ortaklığına dönüştürüyoruz.
+          </p>
+        </article>
+      </section>
+
+      <section class="values">
+        <p class="eyebrow">Kurumsal Değerler</p>
+        <h2>Her temas noktasında güven veren ilkeler.</h2>
+        <div class="value-grid">
+          <article>
+            <h3>Güven</h3>
+            <p>Şeffaflık, dürüstlük ve sürdürülebilir güven ilişkisi.</p>
+          </article>
+          <article>
+            <h3>Yenilikçilik</h3>
+            <p>Sigortayı geliştiren teknolojileri yakından takip eden çözüm odağı.</p>
+          </article>
+          <article>
+            <h3>Müşteri Odaklılık</h3>
+            <p>Her müşteriyi tekil bir ihtiyaç olarak görüp kişiye özel çözümler sunarız.</p>
+          </article>
+          <article>
+            <h3>Ulaşılabilirlik</h3>
+            <p>Hızlı iletişim, net süreçler ve kolay erişilebilir hizmet anlayışı.</p>
+          </article>
+          <article>
+            <h3>Profesyonellik</h3>
+            <p>Bilgi, deneyim ve etik değerlerle yüksek hizmet standardı.</p>
+          </article>
+          <article>
+            <h3>Sürdürülebilirlik</h3>
+            <p>Uzun vadeli ilişkiler kurar, geleceği güvence altına alırız.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div>
+          <h2>Kurumsal iş birlikleri için buradayız.</h2>
+          <p>Size özel sigorta çözümlerini birlikte şekillendirelim.</p>
+        </div>
+        <a class="primary" href="teklif.html">Teklif Al</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h3>Novera Sigorta</h3>
+          <p>Güvenin yeni adı. Şeffaf, hızlı ve insana yakın sigorta danışmanlığı.</p>
+        </div>
+        <div class="footer-links">
+          <strong>Hızlı Linkler</strong>
+          <a href="hizmetler.html">Hizmetler</a>
+          <a href="kurumsal.html">Kurumsal</a>
+          <a href="iletisim.html">İletişim</a>
+          <a href="teklif.html">Teklif Al</a>
+        </div>
+        <div class="footer-contact">
+          <strong>İletişim</strong>
+          <span>+90 532 643 29 00</span>
+          <span>berkayozkan@noverasigorta.com</span>
+          <span>www.noverasigorta.com</span>
+        </div>
+        <div class="footer-contact">
+          <strong>Adres</strong>
+          <span>Cumhuriyet Mahallesi, Nilüfer Hatun Caddesi No:114</span>
+          <span>I Blok No:11 - Podyumpark, Nilüfer/Bursa 16140</span>
+        </div>
+      </div>
+      <div class="footer-meta">© 2024 Novera Sigorta. Tüm hakları saklıdır.</div>
+    </footer>
+  </body>
+</html>
