@@ -115,6 +115,15 @@
         transition: color 0.2s ease;
       }
 
+      a[href^="tel"] {
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      a[href^="tel"]:hover {
+        text-decoration: underline;
+      }
+
       .nav-button {
         border: 1px solid rgba(31, 31, 31, 0.7);
         background: var(--white);
@@ -296,7 +305,7 @@
         <div class="contact-card">
           <p class="eyebrow">İletişim</p>
           <h2>Novera Sigorta’ya ulaşın.</h2>
-          <p>+90 532 643 29 00</p>
+          <p><a href="tel:+905326432900">+90 532 643 29 00</a></p>
           <p>berkayozkan@noverasigorta.com</p>
           <p>www.noverasigorta.com</p>
         </div>
@@ -337,7 +346,7 @@
         </div>
         <div class="footer-contact">
           <strong>İletişim</strong>
-          <span>+90 532 643 29 00</span>
+          <span><a href="tel:+905326432900">+90 532 643 29 00</a></span>
           <span>berkayozkan@noverasigorta.com</span>
           <span>www.noverasigorta.com</span>
         </div>

@@ -115,6 +115,15 @@
         transition: color 0.2s ease;
       }
 
+      a[href^="tel"] {
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      a[href^="tel"]:hover {
+        text-decoration: underline;
+      }
+
       .nav-button {
         border: 1px solid rgba(31, 31, 31, 0.7);
         background: var(--white);
@@ -247,13 +256,22 @@
         letter-spacing: 2px;
       }
 
-      .qr-placeholder {
-        width: 86px;
-        height: 86px;
+      .qr-code {
+        width: 96px;
+        height: 96px;
         border: 2px solid var(--ink);
+        border-radius: 12px;
+        background: var(--white);
         display: grid;
         place-items: center;
-        font-weight: 700;
+        padding: 6px;
+        text-decoration: none;
+      }
+
+      .qr-code img {
+        width: 100%;
+        height: 100%;
+        image-rendering: pixelated;
       }
 
       .card-bottom {
@@ -465,15 +483,23 @@
               <h2>NOVERA</h2>
               <p>SİGORTA</p>
             </div>
-            <div class="qr-placeholder">
-              <span>QR</span>
-            </div>
+            <a
+              class="qr-code"
+              href="tel:+905326432900"
+              aria-label="Novera Sigorta telefonu için QR kodu"
+            >
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=tel%3A%2B905326432900"
+                alt="Telefon için QR kodu"
+                loading="lazy"
+              />
+            </a>
           </div>
           <div class="card-bottom">
             <p class="card-name">Berkay ÖZKAN</p>
             <div class="card-line"></div>
             <ul>
-              <li>+90 532 643 29 00</li>
+              <li><a href="tel:+905326432900">+90 532 643 29 00</a></li>
               <li>berkayozkan@noverasigorta.com</li>
               <li>www.noverasigorta.com</li>
             </ul>
@@ -485,7 +511,6 @@
     <main>
       <section class="services">
         <div class="section-title">
-          <p class="eyebrow">Ana Sayfa Metni</p>
           <h2>Novera Sigorta’ya hoş geldiniz.</h2>
           <p class="section-lead">
             Modern çağın ihtiyaçlarını yakından takip eden yapımızla bireysel ve kurumsal
@@ -533,7 +558,7 @@
         </div>
         <div class="footer-contact">
           <strong>İletişim</strong>
-          <span>+90 532 643 29 00</span>
+          <span><a href="tel:+905326432900">+90 532 643 29 00</a></span>
           <span>berkayozkan@noverasigorta.com</span>
           <span>www.noverasigorta.com</span>
         </div>
